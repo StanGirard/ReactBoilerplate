@@ -11,7 +11,7 @@ const Example = (props) => {
     const  {text, exampleConstants} = (props);
     const handleButtonClick = () => {
         if (text === undefined) {
-            exampleConstants('Hello World !');
+            exampleConstants('Hello World!');
         }
         else{
             exampleConstants(undefined);
@@ -20,8 +20,6 @@ const Example = (props) => {
 
 
     return (
-
-        // noinspection JSAnnotator
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
