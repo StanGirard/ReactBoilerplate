@@ -1,7 +1,7 @@
 import {createStore, applyMiddleware, combineReducers} from 'redux'
 import {createLogger} from 'redux-logger'
 import exampleReducer from './reducers/example.reducer'
-import {loadState} from "./functions/localStorage";
+import {loadState} from "./functions/example.localStorage";
 // import {logger, loggerActionMiddleware} from './middleware/example.middleware'
 
 const persistedState = loadState();

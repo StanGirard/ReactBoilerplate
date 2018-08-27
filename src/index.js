@@ -5,7 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import store from './store.js'
 import {Provider} from 'react-redux'
-import {saveState} from "./functions/localStorage";
+import {saveState} from "./functions/example.localStorage";
 import throttle from 'lodash/throttle'
 
 const storeCreation = store();
