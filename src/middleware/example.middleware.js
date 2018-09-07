@@ -1,3 +1,5 @@
+import {API} from "../constants/example.constants";
+
 export const logger = store => next => action => {
     console.log('dispatching', action)
     let result = next(action)
@@ -8,4 +10,11 @@ export const logger = store => next => action => {
 export const loggerActionMiddleware = store => next => action => {
     console.log(action.type);
     next(action);
+};
+
+export const api = ({dispatch, getState}) => next => action => {
+    if (action.type !== API)
+    {
+        
+    }
 };
