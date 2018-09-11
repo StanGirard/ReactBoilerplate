@@ -9,7 +9,7 @@ const Notification = (props) => {
     notify({
       title: 'Notifications status',
       message: 'default, info, success, warning, error',
-      status: 'error',
+      status: 'info',
       dismissible: true,
       dismissAfter: 3000
     })
