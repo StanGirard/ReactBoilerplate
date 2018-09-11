@@ -1,9 +1,9 @@
-import {handleActions} from 'redux-actions'
+import { handleActions } from 'redux-actions'
 
 export const initialState = {
-    example: {
-        text: 'Hello world !'
-    }
+  example: {
+    text: 'Hello world !'
+  }
 }
 
 export default handleActions({

@@ -1,2 +1,2 @@
-export const EXAMPLE_CONSTANTS = 'EXAMPLE_CONSTANTS';
-export const API = 'API';
+export const EXAMPLE_CONSTANTS = 'EXAMPLE_CONSTANTS'
+export const API = 'API'
