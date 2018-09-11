@@ -7,6 +7,7 @@ import store from './store.js'
 import { Provider } from 'react-redux'
 import { saveState } from './functions/example.localStorage'
 import throttle from 'lodash/throttle'
+import 'babel-polyfill'
 const time = 1000
 
 const storeCreation = store()

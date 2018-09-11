@@ -7,5 +7,5 @@ export const initialState = {
 }
 
 export default handleActions({
-    EXAMPLE_CONSTANTS: (state, action) => {return {...state, example: {...state.example, text: action.payload}}}
+  EXAMPLE_CONSTANTS: (state, action) => {return {...state, example: {...state.example, text: action.payload}}}
 }, initialState)

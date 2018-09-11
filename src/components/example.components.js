@@ -5,6 +5,10 @@ import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { Button } from 'semantic-ui-react'
 import { exampleConstants } from '../actions/example.actions'
+import Notification from './example.notificationCreation'
+import NotificationsSystem from 'reapop'
+// 2. import reapop theme
+import theme from 'reapop-theme-wybo'
 
 const Example = (props) => {
   const { text, exampleConstants } = (props)
@@ -14,7 +18,7 @@ const Example = (props) => {
     } else {
       exampleConstants(undefined);
     }
-}
+  }
 
   return (
     <div className='App'>
@@ -22,8 +26,11 @@ const Example = (props) => {
         <img src={logo} className='App-logo' alt='logo' />
         <h1 className='App-title'>Welcome to React</h1>
       </header>
+
       <Button onClick={handleButtonClick}> Click me to send event </Button>
       <p> {text} </p>
+      <Notification />
+      <NotificationsSystem theme={theme} />
     </div>
   )
 }
