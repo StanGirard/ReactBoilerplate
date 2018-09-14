@@ -9,7 +9,7 @@ import Notification from './example.notificationCreation'
 import NotificationsSystem from 'reapop'
 // 2. import reapop theme
 import theme from 'reapop-theme-wybo'
-import Menu from './example.menu'
+
 
 const Example = (props) => {
   const { text, exampleConstants } = (props)
@@ -24,7 +24,6 @@ const Example = (props) => {
   return (
     <div className='App'>
       <header className='App-header'>
-        <Menu />
         <img src={logo} className='App-logo' alt='logo' />
         <h1 className='App-title'>React & Redux Boilerplate</h1>
       </header>
