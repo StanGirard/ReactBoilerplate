@@ -6,13 +6,11 @@ import { connect } from 'react-redux'
 import { Button } from 'semantic-ui-react'
 import { exampleConstants } from '../actions/example.actions'
 import Notification from './example.notificationCreation'
-import NotificationsSystem from 'reapop'
-// 2. import reapop theme
-import theme from 'reapop-theme-wybo'
+import fetchAPI from '../functions/example.api'
 
 
 const Example = (props) => {
-  const { text, exampleConstants } = (props)
+  const { text, exampleConstants, fetchAPI } = (props)
   const handleButtonClick = () => {
     if (text === undefined) {
       exampleConstants('Hello World!')
@@ -30,13 +28,13 @@ const Example = (props) => {
 
       <Button onClick={handleButtonClick}> Try Me !!! </Button>
       <p> {text} </p>
-      <Notification />
-      <NotificationsSystem theme={theme} />
+      <Notification/>
+      <Button onClick={fetchAPI}> Fetch API</Button>
     </div>
   )
 }
 
 export default withRouter(connect(
   (state) => ({ text: state.example.example.text }),
-  { exampleConstants }
+  { exampleConstants, fetchAPI }
 )(Example))

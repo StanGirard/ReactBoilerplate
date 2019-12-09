@@ -1,19 +1,27 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { notify } from 'reapop'
 
-const Notification = (props) => {
-  const { notify } = props
+import { store } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
+import 'animate.css';
+
+
+const Notification = () => {
+  
   const onClick = () => {
-    // 3. we use `notify` to create a notification
-    notify({
-      title: 'Notifications status',
-      message: 'default, info, success, warning, error',
-      status: 'info',
-      dismissible: true,
-      dismissAfter: 3000
-    })
-  }
+    
+      store.addNotification({
+        title: 'Dropbox',
+        message: 'Files were synced',
+        type: 'default',                         // 'default', 'success', 'info', 'warning'
+        container: 'bottom-left',                // where to position the notifications
+        animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+        animationOut: ["animated", "fadeOut"],   // animate.css classes that's applied
+        dismiss: {
+          duration: 3000 
+        }
+      })
+    }
 
   return (
     <div>
@@ -24,4 +32,4 @@ const Notification = (props) => {
 
 // 2. we map dispatch to props `notify` async action creator
 //    here we use a shortcut instead of passing a `mapDispathToProps` function
-export default connect(null, { notify })(Notification)
+export default Notification
